@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let nameItem of names">hello {{nameItem}}</li>
+    <br>
+    <br>
+    <li *ngFor="let nameItem of names">
+        <app-user-item [name]="nameItem"></app-user-item>  <!-- //[]이런식으로 대괄호로 묵으면 대괄호 안의 변수에 입력값을 전달 한다는 뜻 -->
+    </li>
+</ul>
+
+<br>
+
+<button (click)='clickAfterPrint()'>버튼 <-입력한 변수</button>     <!-- (click) 로 클릭 이벤트 발생 -->
