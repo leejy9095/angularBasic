@@ -13,6 +13,9 @@ export class UserListComponent implements OnInit {
   //변수 선언
   names: string[];  //스트링타입의 배열로 names라는 변수 생성 (변수명 : 자료향)
 
+  id : string = "";
+  pwd : string = "";  
+
   constructor() {
     this.names = ['aa', 'bb', 'cc'];
 
@@ -30,4 +33,8 @@ export class UserListComponent implements OnInit {
     arrayVal.push('data' + arrayVal.length);
   }
 
+  tryToLogin() : void{
+    console.log(this.id, this.pwd);
+  }
+  
 }

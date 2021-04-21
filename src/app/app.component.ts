@@ -5,7 +5,7 @@ import { Component } from '@angular/core';  //import {things} from wherever 형�
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent { //export 명령어는 해당 클래스를 외부에서 사용 할 수 있도록 해 주는 기능
   title = 'firstStudy';
 
   constructor (){  

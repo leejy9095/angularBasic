@@ -10,3 +10,9 @@
 <br>
 
 <button (click)='clickAfterPrint()'>버튼 <-입력한 변수</button>     <!-- (click) 로 클릭 이벤트 발생 -->
+
+<br>
+
+<input type="text" placeholder="id" [(ngModel)]="id"/>  <!-- [(ngModel)] 로 입력받은 데이터를 처리, id에 input type의 데이터를 묶을 때 사용-->
+<input type="text" placeholder="password"  [(ngModel)]="pwd"/>
+<button (click)='tryToLogin()'>Login</button>

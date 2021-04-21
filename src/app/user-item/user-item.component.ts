@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';   //입력을 위해 i
   styleUrls: ['./user-item.component.css']
 })
 export class UserItemComponent implements OnInit {
-  @Input() name : string | undefined;   //input 받는 변수 추가
+  @Input() name : string = "";   //input 받는 변수 추가
 
 
   constructor() { }
