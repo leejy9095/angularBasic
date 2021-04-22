@@ -3,7 +3,7 @@
     <br>
     <br>
     <li *ngFor="let nameItem of names">
-        <app-user-item [name]="nameItem"></app-user-item>  <!-- //[]이런식으로 대괄호로 묵으면 대괄호 안의 변수에 입력값을 전달 한다는 뜻 -->
+        <app-user-item [name]="nameItem" ></app-user-item>  <!-- //[]이런식으로 대괄호로 묵으면 대괄호 안의 변수에 입력값을 전달 한다는 뜻 -->
     </li>
 </ul>
 
@@ -13,6 +13,4 @@
 
 <br>
 
-<input type="text" placeholder="id" [(ngModel)]="id"/>  <!-- [(ngModel)] 로 입력받은 데이터를 처리, id에 input type의 데이터를 묶을 때 사용-->
-<input type="text" placeholder="password"  [(ngModel)]="pwd"/>
-<button (click)='tryToLogin()'>Login</button>
+<app-user-login *ngIf="loginBool" (sendEvent)="getEventLogin($event)"></app-user-login>   <!-- //@Component에 selector에 선언한 태그를 사용 -->

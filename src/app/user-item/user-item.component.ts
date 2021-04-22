@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';   //입력을 위해 input 추가
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';   //입력을 위해 input 추가
 
 @Component({
   selector: 'app-user-item',
@@ -6,12 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';   //입력을 위해 i
   styleUrls: ['./user-item.component.css']
 })
 export class UserItemComponent implements OnInit {
-  @Input() name : string = "";   //input 받는 변수 추가
+  @Input() name : string = "";   //@input은 받는 역활을 의미 (앞에서 [변수]로 넘긴 값을 @input을 써서 받아온다)
 
-
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
-
+  
 }

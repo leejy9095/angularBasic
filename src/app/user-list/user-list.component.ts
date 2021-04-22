@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 const arrayVal : Array<string> = ['data0','data1','data2']   //class 밖에서 global 하게 선언  (변수명 : 자료형)
 
@@ -13,13 +13,12 @@ export class UserListComponent implements OnInit {
   //변수 선언
   names: string[];  //스트링타입의 배열로 names라는 변수 생성 (변수명 : 자료향)
 
-  id : string = "";
-  pwd : string = "";  
+  loginBool = true;
 
   constructor() {
     this.names = ['aa', 'bb', 'cc'];
 
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -33,8 +32,9 @@ export class UserListComponent implements OnInit {
     arrayVal.push('data' + arrayVal.length);
   }
 
-  tryToLogin() : void{
-    console.log(this.id, this.pwd);
+  getEventLogin(event: any){
+    console.log(event)
+    this.loginBool = event;
   }
-  
+
 }
