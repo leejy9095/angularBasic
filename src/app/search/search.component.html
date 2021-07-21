@@ -1,0 +1,50 @@
+<h1>검색</h1>
+
+<p>
+  <input type="text" #newquery [value]="query" (keydown.enter)="submit(newquery.value)">
+  <button (click)="submit(newquery.value)">Search</button>
+</p>
+<!-- #newquery는 id가 newquery라는거 submit할떄 newquery하면 input이고 그거의 value여서 내가 input에 입력한 값이 넘어감 , value에 query변수에 있는 값 set -->
+
+<div>
+  <!-- <div *ngIf="!results.length"> 나중에 예외처리 추가 -->
+  <div>
+    No tracks '{{ query }}'
+  </div>
+
+  <div>
+    <h1>목록</h1>                                                                    
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div class="content">
+            <img src="../../assets/images/test.png" class="img-responsive">
+            <!--
+            <div class="caption">
+              <h2>
+                <a [routerLink]="['/artists', 'id']">artists</a>
+              </h2>
+              <a [routerLink]="['/tracks', 'id']">name</a>
+            </div>
+            -->
+            <div class="attribution">
+              <h4>
+                <a [routerLink]="['/albums', 'a']">artists</a>
+              </h4>
+            </div>
+            <div class="attribution">
+              <h4>
+                <a [routerLink]="['/albums', 'a']">
+                  album.name
+                </a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>

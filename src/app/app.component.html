@@ -1,3 +1,22 @@
-{{title}}
+<!-- {{title}}
 
 <app-user-list></app-user-list>   <!-- //@Component에 selector에 선언한 태그를 사용 -->
+
+<div class="page-header">
+    <div class="container">
+        <h1>Spotify <small>Music Search</small></h1>
+        <div class="navLinks">
+            <a [routerLink]="['/home']">Home</a>
+            <a [routerLink]="['/about']">About Us</a>
+            <a [routerLink]="['/search']">Search</a>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="container">
+        <app-login></app-login>
+        <router-outlet></router-outlet>     <!--라우터가 호출되면서 호출된 초기화면이 이쪽에 그려진다-->
+    </div>
+</div>
+  

@@ -1,0 +1,23 @@
+<form class="form-inline bottom-line" *ngIf="!authService.getUser()">
+  <div class="form-group">
+    <label for="username">ID : </label>
+    <input class="form-control" name="username" #username>
+    <!-- <input class="form-control" name="username2" [(ngModel)]="id2">  이런식으로 ngModel 디렉티브를 이용해서 .ts파일에 선언한 id2 변수를 이용해서 양방향 바인딩(서로서로 값 전달)이 가능--> 
+  </div>
+  
+  &nbsp;&nbsp;
+
+  <div class="form-group">
+    <label for="password">PW : </label>
+    <input class="form-control" type="password" name="password" #password>
+  </div>
+
+  <a class="btn btn-default" (click)="login(username, password); ">Submit</a>
+</form>
+
+<br>
+
+<div class="bottom-line" *ngIf="authService.getUser()">
+  <b>{{ authService.getUser() }}님 로그인하셨습니다.</b>
+  <a href (click)="logout()">Log out</a>
+</div>
